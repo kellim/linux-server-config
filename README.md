@@ -163,7 +163,7 @@
       ```
 	* Deleted the line `import secret`
 	* Deleted the `secret.py.config` file with the command 'rm secret.py.config' (because the secret key is now in the wsgi file)
-	* Updated the 4 lines with filenames `client_secrets.json` and `fb_client_secrets.json` to have the full path to the files: `/var/www/linkcollector/linkcollector/client_secrets.json` and `/var/www/linkcollector/linkcollector/fb_client_secrets.json`.
+	* To fix error `No such file or directory: 'client_secrets.json'`,updated the 4 lines with filenames `client_secrets.json` and `fb_client_secrets.json` to have the full path to the files: `/var/www/linkcollector/linkcollector/client_secrets.json` and `/var/www/linkcollector/linkcollector/fb_client_secrets.json`.
 	* Tested app in browser and it works.
 
 ## Resources Used
