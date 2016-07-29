@@ -155,12 +155,12 @@
 	* Tested app in browser, and getting error `No module named oauth2client.client` so ran command `sudo pip install --upgrade google-api-python-client --ignore-installed six` to resolve it.
 	* Ran `sudo nano __init__.py` and made the following updates:
 	  * Deleted this code at the bottom of the file:
-	      ```
-	      if __name__ == '__main__':
-	          app.secret_key = secret.SECRET_KEY
-	          app.debug = True
-	          app.run(host='0.0.0.0', port=5000)
-	      ```
+      ```
+      if __name__ == '__main__':
+          app.secret_key = secret.SECRET_KEY
+          app.debug = True
+          app.run(host='0.0.0.0', port=5000)
+      ```
 	* Deleted the line `import secret`
 	* Deleted the `secret.py.config` file with the command 'rm secret.py.config' (because the secret key is now in the wsgi file)
 	* Updated the 4 lines with filenames `client_secrets.json` and `fb_client_secrets.json` to have the full path to the files: `/var/www/linkcollector/linkcollector/client_secrets.json` and `/var/www/linkcollector/linkcollector/fb_client_secrets.json`.
