@@ -62,7 +62,7 @@
     * `CREATE USER catalog WITH PASSWORD 'PasswordGoesHere'` - create catalog user. Replaced actual password above with <em>PasswordGoesHere</em>. Permissions to be updated in a later step.
     * Note that the assignment mentions to "Do not allow remote connections" and according to [documentation](https://www.postgresql.org/docs/9.1/static/auth-pg-hba-conf.html), the default behavior does not allow remote TCP/IP connections.
     * Pressed `ctrl-d` to leave the postgres prompt and then ran `su grader` to log back in as user `grader`. 
-* Installed git, clone dand setup my Catalog App project so that it functions correctly when visiting my server's IP address in a browser. Remember to set this up appropriately so that your .git directory is not publicly accessible via a browser!
+* Installed git, cloned and setup my Catalog App project so that it functions correctly when visiting my server's IP address in a browser.
     * Installed and configured git using these commands:
         * `sudo apt-get install git`
         * `git config --global user.name "My Name"`
@@ -132,7 +132,7 @@
             application.secret_key = 'SecretKeyGoesHere'
             ```
     * Restart Apache with the command `sudo service apache2 restart`
-    * Finish PostgreSQL setup
+    * Finished PostgreSQL setup:
         * Ran the command `sudo nano models.py` and edited line that said `engine = create_engine('postgresql:///links')` to be `engine = create_engine('postgresql://catalog:PASSWORD_GOES_HERE@localhost/links')`. Note that the real password isn't shown here.
         * Ran the command `sudo nano add_test_data.py` and made the same changes to the file as I did to `models.py` above.
         * Then did the same for `__init__.py`, running `sudo nano __init__.py`.
