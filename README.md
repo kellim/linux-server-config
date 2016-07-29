@@ -97,26 +97,26 @@
     * Enabled and configured my virtual host with these comannds:
         * `sudo nano /etc/apache2/sites-available/linkcollector.conf`
         * Added the following code to the file before saving (code is adapted from [How to deploy a Flask application on an Ubuntu VPS](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps))
-            ```
-            <VirtualHost *:80>
-            		ServerName 52.38.197.19
-		            ServerAlias ec2-52-38-197-19.us-west-2.compute.amazonaws.com
-            		ServerAdmin webmaster@localhost
-            		WSGIScriptAlias / /var/www/linkcollector/linkcollector.wsgi
-            		<Directory /var/www/linkcollector/linkcollector/>
-            			Order allow,deny
-            			Allow from all
-            		</Directory>
-            		Alias /static  /var/www/linkcollector/linkcollector/static
-            		<Directory /var/www/linkcollector/linkcollector/static/>
-            			Order allow,deny
-            			Allow from all
-            		</Directory>
-            		ErrorLog ${APACHE_LOG_DIR}/error.log
-            		LogLevel warn
-            		CustomLog ${APACHE_LOG_DIR}/access.log combined
-            </VirtualHost>
-            ```
+    	```
+		<VirtualHost>
+	    	ServerName 52.38.197.19
+	        ServerAlias ec2-52-38-197-19.us-west-2.compute.amazonaws.com
+	    	ServerAdmin webmaster@localhost
+	    	WSGIScriptAlias / /var/www/linkcollector/linkcollector.wsgi
+	    	<Directory /var/www/linkcollector/linkcollector/>
+	    		Order allow,deny
+	    		Allow from all
+	    	</Directory>
+	    	Alias /static  /var/www/linkcollector/linkcollector/static
+	    	<Directory /var/www/linkcollector/linkcollector/static/>
+	    		Order allow,deny
+	    		Allow from all
+	    	</Directory>
+	    	ErrorLog ${APACHE_LOG_DIR}/error.log
+	    	LogLevel warn
+	    	CustomLog ${APACHE_LOG_DIR}/access.log combined
+		</VirtualHost>
+    	```
         * `sudo a2ensite linkcollector` - enable virtual host.
     * Create the .wsgi file in `cd /var/www/linkcollector` with the following commands:
         * `cd /var/www/linkcollector`
