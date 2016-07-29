@@ -99,7 +99,8 @@
         * Added the following code to the file before saving (code is adapted from [How to deploy a Flask application on an Ubuntu VPS](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps))
             ```
             <VirtualHost *:80>
-            		ServerName ec2-52-38-197-19.us-west-2.compute.amazonaws.com
+            		ServerName 52.38.197.19
+		            ServerAlias ec2-52-38-197-19.us-west-2.compute.amazonaws.com
             		ServerAdmin webmaster@localhost
             		WSGIScriptAlias / /var/www/linkcollector/linkcollector.wsgi
             		<Directory /var/www/linkcollector/linkcollector/>
