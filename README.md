@@ -186,3 +186,4 @@
 * https://www.postgresql.org/docs/current/static/sql-grant.html
 * https://discussions.udacity.com/t/no-module-named-oauth2client-client/168463
 * https://discussions.udacity.com/t/client-secret-json-not-found-error/34070
+* https://discussions.udacity.com/t/application-shows-with-my-public-ip-address-but-not-with-my-amazon-ec2-instance-public-url/37117/3
