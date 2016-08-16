@@ -1,3 +1,5 @@
+These are the instructions I wrote for my Udacity Full Stack Web Developer Nanodegree project to setup a Linux server with my [https://github.com/kellimb/link-collector](Link Collector app). The Linux server was on AWS through Udacity and was only available until I completed the program.
+
 # Linux Server Info
 * IP Address: 52.38.197.19
 * SSH Port: 2200
